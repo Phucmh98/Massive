@@ -1,0 +1,22 @@
+.partners {
+
+    .partners__content {
+        padding: 0 $pd-5;
+
+        .partners__carousel {
+
+            .partners__item {
+                .owl-item {
+                    width: 180px;
+
+
+                    img {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+

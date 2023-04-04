@@ -1,0 +1,31 @@
+.cover {
+    padding: $pd-9 + 20 0;
+    background-image: url('../../img/cover.jpg');
+    @include backGroundFix();
+    text-align: center;
+
+    .cover__text {
+        span {
+            @include textStyle($font-size-2 + 1, $font-weight-2, $color-yellow-0, 3px, 1.5)
+        }
+
+        h1 {
+            @include textStyle($font-size-6, $font-weight-2, $color-white-0, 2px, 1.5)
+        }
+    }
+
+    .cover__button {
+        margin-top: $mg-7 + 10;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .cover {
+        .cover__text {
+            h1 {
+                font-size: $font-size-4 + 2;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,69 @@
+.feedback {
+    border-bottom: $border-2;
+
+    .feedback__content {
+        width: 66.67%;
+        margin: auto;
+        padding: 0 $pd-5;
+
+        .feedback__item {
+            margin: $mg-3;
+            text-align: center;
+
+            .feedback__thumb {
+                display: inline-block;
+                width: 100px;
+                margin-bottom: $mg-3;
+
+                img {
+                    border-radius: 50%;
+                    display: block;
+                    width: 100%;
+                }
+            }
+
+            .feedback__comment {
+                @include textStyle($font-size-2 + 1, $font-weight-2 , $color-gray-1, normal, 30px);
+                margin-bottom: $mg-5;
+                font-style: italic;
+                
+            }
+
+            .feedback__user {
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                margin-top: $mg-1;
+
+                p:first-child {
+                    margin: 0;
+                    font-size: $font-size-1 + 1;
+                    color: $color-black-3;
+                }
+
+                p:last-child {
+                    margin: 0;
+                    font-size: $font-size-1 - 1;
+                    color: $color-gray-1;
+                }
+            }
+        }
+
+       
+    }
+}
+
+@media screen and (min-width:576px) and (max-width: 1199.98px) {
+    .feedback{
+        .feedback__content{
+            width: 100%;
+        }
+    }
+    
+}
+@media screen and (max-width:992px) {
+    .feedback{
+        .container{
+            max-width: 750px;
+        }
+    }
+}

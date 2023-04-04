@@ -1,0 +1,192 @@
+.team {
+    .team-info {
+        @include infoSection();
+        margin-bottom: $mg-8 - 30;
+    }
+
+    .team__item {
+        position: relative;
+        overflow: hidden;
+
+        .team__photo {
+
+            position: relative;
+
+            .team__info {
+                position: relative;
+            }
+
+            img {
+                width: 100%;
+            }
+
+
+            .team__name {
+                position: absolute;
+                right: 0;
+                bottom: 33px;
+                width: 70%;
+                background-color: rgba(0, 0, 0, 0.7);
+                text-align: right;
+                text-transform: uppercase;
+                padding: 10px 20px;
+
+                h3 {
+                    @include textStyle($font-size-1 + 1, $font-weight-1, $color-white-0, 2px, 1.5);
+                    margin-bottom: $mg-0 - 3;
+                }
+
+                p {
+                    @include textStyle($font-size-1 - 1, $font-weight-1, $color-white-2, 2px, 1.5);
+                    margin: 0;
+                }
+            }
+        }
+
+        .team__info {
+            @include borderHover();
+            opacity: 0;
+
+            .team__text {
+                position: absolute;
+                top: 0;
+                transform: translateY(-55%);
+                padding: 0 20px;
+                opacity: 0;
+                transition: all 0.3s;
+
+                h3 {
+                    text-transform: uppercase;
+                    letter-spacing: 4px;
+                    font-size: 14px;
+                    color: #222;
+                    margin-bottom: 25px;
+                }
+
+                p {
+                    font-size: 14px;
+                    color: #7e7e7e;
+                    line-height: 30px;
+                }
+            }
+
+            .team__social {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                font-size: 35px;
+                text-align: center;
+                transform: translateY(45%);
+                opacity: 0;
+                transition: all 0.3s;
+
+                a {
+                    font-size: 16px;
+                    color: #222;
+                    margin: 0 10px;
+
+                    &:hover {
+                        color: $color-yellow-0;
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            .team__info {
+                opacity: 1;
+
+                .team__text {
+                    top: 35%;
+                    opacity: 1;
+                }
+
+                .team__social {
+                    bottom: 10%;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .team__promo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $color-white-3;
+        padding: $pd-7;
+        margin-top: $mg-8;
+
+        h3 {
+            @include textStyle($font-size-3 - 2, $font-weight-2, $color-black-1, 1px, 1.5);
+            margin-bottom: 0;
+
+            span {
+                color: $color-yellow-0;
+
+            }
+        }
+
+        p {
+            color: $color-gray-1;
+            margin-top: $mg-1;
+            margin-bottom: 0;
+        }
+
+        .btn--bkack {
+            background-color: $color-black-1;
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .team {
+        padding: $pd-7 + 10 0;
+        .container {
+            max-width: 100%;
+
+            .team-info {
+                h2{
+                    font-size: 18px;
+                }
+                p{
+                    width: 80%;
+                }
+                
+            }
+            .team-content{
+                .team__item {
+                    display: block;
+
+                    .team__promo-btn {
+                        margin-top: $mg-3;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+    .team {
+        .container {
+            .team-content {
+                .teampromo-info {
+                    width: 70%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:992px) {
+    .team {
+        .container {
+            .team-content {
+                .teampromo-info {
+                    width: 75%;
+                }
+            }
+        }
+    }
+}

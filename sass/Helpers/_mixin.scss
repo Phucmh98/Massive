@@ -1,0 +1,83 @@
+//FONT STYLE
+@mixin textStyle($font-size, $font-weight, $color-text, $letter-spacing, $line-height) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color-text;
+    letter-spacing: $letter-spacing;
+    line-height: $line-height;
+}
+
+//Fix background
+@mixin backGroundFix() {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+//header h2 and p in info
+@mixin infoSection() {
+    text-align: center;
+
+    h2 {
+        @include textStyle($font-size-4, $font-weight-2, $color-black-1, 2px, 1.5);
+        position: relative;
+        padding-bottom: $pd-1;
+        margin-bottom: $mg-3;
+
+
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            width: 60px;
+            height: 2px;
+            background-color: $color-gray-0;
+            margin-left: -31px;
+
+        }
+    }
+
+    p {
+        width: 60%;
+        margin: auto;
+        line-height: 25px;
+        color: $color-gray-1;
+    }
+}
+
+//Border hover
+@mixin borderHover() {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: $border-1;
+    background-color: $color-white-1;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+// BUTTON STYLE 
+@mixin styleButton($color,$bg-color,$border,$fs,$fw,$pd-y,$pd-x){
+    color:$color;
+    background-color: $bg-color;
+    border: 1px solid $border;
+    font-size: $fs;
+    font-weight: $fw;
+    padding: $pd-y $pd-x;
+    cursor: pointer;
+    border-radius: 0;
+    letter-spacing: 1px;
+    transition: all .3s;
+    text-transform: uppercase;
+    
+}
+@mixin hoverButton($color-hover,$bg-color,$border-hover){
+    color: $color-hover;
+    background-color: $bg-color;
+    border: 1px solid $border-hover;
+}

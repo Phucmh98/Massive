@@ -1,0 +1,35 @@
+.banner {
+    
+    height: 100vh;
+    background-image: url('../../img/banner.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    @include backGroundFix();
+    
+    .banner__content{        
+        text-align: center;
+        h1{
+            @include textStyle($font-size-7, $font-weight-1,$color-white-0, 5px, normal);
+            
+            margin-bottom: 0;
+        }
+        h2{
+            @include textStyle($font-size-3, $font-weight-2,$color-white-0, 6px, 1.5);            
+            margin-bottom: 0;
+        }
+    }
+}
+@media screen and (max-width:768px) {
+    .banner{
+        .banner__content{
+            h1{
+                @include textStyle($font-size-5, $font-weight-1,$color-white-0, 5px, normal);
+            }
+            h2{
+                @include textStyle($font-size-3 - 2, $font-weight-2,$color-white-0, 6px, 1.5);
+            }
+        }
+    }
+    
+}

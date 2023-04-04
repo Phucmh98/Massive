@@ -1,0 +1,112 @@
+#design {
+    padding: $pd-8 0;
+
+
+    .design-info {
+        margin-bottom: $pd-9;
+        text-align: center;
+        @include infoSection()
+    }
+
+    .design-content {
+        margin: 0;
+
+        .design-pd {
+            padding-left: $pd-5;
+            padding-right: $pd-5;
+        }
+
+        .design__item {
+            position: relative;
+            border: $border-0;
+            border-radius: 4px;
+            padding: $pd-5;
+
+
+            .design__icon {
+                position: absolute;
+                top: -30px;
+                left: 30px;
+                width: 60px;
+                height: 60px;
+                border-radius: 4px;
+                text-align: center;
+                background-color: $color-black-3;
+                box-shadow: $box-shadow-1;
+                line-height: 60px;
+                transition: all 0.5s;
+
+                i {
+                    font-size: $font-size-5;
+                    color: $color-white-0;
+                    line-height: 60px;
+                }
+
+            }
+
+            &:hover .design__icon {
+                background-color: $color-yellow-0;
+            }
+
+        }
+
+        h2 {
+            @include textStyle($font-size-4, $font-weight-2, $color-black-1, 1px, 1.5);
+            margin: $mg-5 0 $mg-3 0;
+        }
+
+        p {
+            color: $color-gray-1;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #design {
+        .container {
+            max-width: 1170px;
+        }
+    }
+
+}
+
+@media screen and (max-width:992px) {
+    #design {
+        .container {
+
+            margin: auto;
+        }
+
+        .design-content {
+            .design__item {
+                margin-bottom: $mg-7 + 10;
+            }
+        }
+
+        .design-info {
+            p {
+                width: 80%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    #design {
+        padding: $pd-7 + 10 0;
+        .container {
+            max-width: 100%;
+            .design-content{
+                h2{
+                    font-size: 18px;
+                }
+            }
+        }
+        .design-content {
+            .design__item {
+                margin-bottom: $mg-7 + 10;
+            }
+        }
+
+    }
+}

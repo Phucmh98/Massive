@@ -1,0 +1,46 @@
+.copyright {
+    padding: $pd-6 0;
+    background-color: $color-black-5;
+    border-top: $border-4;
+
+    .copyright__text {
+        p {
+            color: $color-gray-9;
+            margin-top: $mg-1;
+            margin-bottom: 0;
+        }
+    }
+
+    .copyright__social {
+        text-align: right;
+        
+
+        a {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            border:$border-5;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 20px;
+            color: #5a5a5a;
+            margin-right: 15px;
+            text-decoration: none;
+            transition: all 0.3s;
+            &:hover{
+                border-color: transparent;
+                background-color: $color-gray-1;
+                color: $color-white-0;
+            }
+        }
+    }
+}
+@media screen and (max-width:992px) {
+    .copyright{
+        .copyright__social{
+            text-align: left;
+            margin-top: $mg-1;
+        }
+    }
+}

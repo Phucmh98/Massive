@@ -1,0 +1,120 @@
+.footer {
+    background-color: $color-black-3;
+    padding: $pd-8 - 20 0;
+
+    .footer__item {
+        .footer__logo {
+            display: block;
+            margin-bottom: 20px;
+
+            img {
+                height: 100px;
+            }
+
+        }
+
+        .footer__des {
+            line-height: 30px;
+            color: $color-gray-1;
+            margin-bottom: 30px;
+        }
+
+        .footer__title {
+            text-transform: uppercase;
+            @include textStyle($font-size-1 + 1, $font-weight-2, $color-white-0, 1px, normal);
+            margin-bottom: $mg-5;
+        }
+
+        .footer__list {
+            margin: 0;
+            padding: 0;
+            margin-bottom: $mg-7;
+
+            li {
+                border-bottom: $border-3;
+                list-style: none;
+
+                a {
+                    font-weight: $font-weight-2;
+                    text-transform: capitalize;
+                    line-height: 44px;
+                    color: $color-gray-8;
+                    text-decoration: none;
+                    transition: all .3s;
+
+                    &:hover {
+                        color: $color-yellow-0;
+                    }
+
+                    &::before {
+                        font-family: "fontawesome";
+                        font-size: 12px;
+                        content: "\f105";
+                        padding-right: 15px;
+
+                    }
+                }
+            }
+        }
+
+        .footer__work {
+            font-size: 0;
+            padding-left: 0;
+            padding-right: $pd-3;
+            margin: 0;
+
+            li {
+                display: inline-block;
+
+                a {
+                    display: inline-block;
+                    width: 55px;
+                    height: 55px;
+                    margin: 0 $mg-1 $mg-1 0;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.back-to-top {
+    .backToTop {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        background-color: rgba(0, 0, 0, 0.6);
+        text-align: center;
+        color: white;
+        transform: translateY(45px);
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s;
+
+        &:hover {
+            background-color: $color-yellow-0;
+        }
+
+        &.cd-top--is-visible {
+            transform: translateY(0);
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .footer {
+        .container {
+            max-width: 100%;
+            padding: 0 $pd-1 0 $pd-1;
+        }
+    }
+}

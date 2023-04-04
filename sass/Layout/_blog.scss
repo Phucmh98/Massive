@@ -1,0 +1,161 @@
+.blog {
+    
+    .blog-info {
+        @include infoSection();
+        margin-bottom: $mg-8;
+    }
+
+    .blog__content {
+        .blog__photo {
+            figure {
+                position: relative;
+                margin: 0;
+
+                img {
+                    width: 100%;
+                }
+
+                figcaption {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    background-color: $color-black-4;
+                    font-weight: $font-weight-2;
+                    color: $color-white-0;
+                    padding: $pd-1;
+                }
+            }
+
+        }
+
+        .blog__text {
+            padding: $pd-5 0;
+
+            .blog__tag {
+                margin-bottom: $mg-1;
+                padding-left: 0;
+
+                li {
+                    display: inline;
+
+                    &:first-child {
+                        margin-right: 10px;
+                    }
+
+                    a {
+                        text-transform: uppercase;
+                        font-size: $font-size-1 - 1;
+                        color: $color-gray-6;
+                        letter-spacing: 1px;
+                        text-decoration: none;
+                        transition: all 0.3s;
+
+                        &:hover {
+                            color: $color-yellow-0;
+                        }
+                    }
+                }
+            }
+
+            .blog__title {
+                margin-bottom: $mg-1;
+                letter-spacing: 2px;
+
+                a {
+                    transition: all 0.3s;
+                    text-decoration: none;
+                    @include textStyle($font-size-3 - 2, $font-weight-2, $color-black-1, 1px, 1.5);
+
+                    &:hover {
+                        color: $color-yellow-0;
+                    }
+                }
+            }
+
+            .blog__info {
+                font-size: $font-size-1 - 1;
+                margin-bottom: $mg-4;
+                padding: 0;
+
+                li {
+                    display: inline;
+                    list-style: none;
+
+                    &:first-child::after {
+                        content: "|";
+                        color: $color-gray-6;
+                        padding: 0 $pd-1 - 1 0 $pd-1 - 2;
+                    }
+
+                    a {
+                        text-transform: uppercase;
+                        transition: all 0.3s;
+                        text-decoration: none;
+                        @include textStyle($font-size-1 - 1, $font-weight-2, $color-gray-6, 2px, 1.5);
+
+                        &:hover {
+                            color: $color-yellow-0;
+                        }
+                    }
+                }
+            }
+
+            p {
+                color: $color-gray-1;
+                line-height: 30px;
+                margin-bottom: $mg-5;
+            }
+
+            .blog__read {
+                position: relative;
+                text-transform: uppercase;
+                color: $color-gray-7;
+                letter-spacing: 1px;
+                font-weight: $font-weight-2;
+                text-decoration: none;
+                transition: all 0.3s;
+
+                &:hover {
+                    color: $color-black-3;
+                }
+
+                i {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    margin-left: $mg-1;
+
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) and (max-width:1200.98px) {
+    .blog {
+        .blog__content {
+            .blog__text {
+                padding: 0 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .blog {
+        padding: $pd-7 + 10 0;
+        .container {
+            max-width: 100%;
+
+            .blog-info {
+                h2 {
+                    font-size: $font-size-2 + 3;
+                }
+                p{
+                    width: 80%;
+                }
+            }
+        }
+    }
+}

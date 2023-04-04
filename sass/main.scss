@@ -1,0 +1,28 @@
+//Base
+@import './Base/_customize.scss';
+@import './Base/_reset.scss';
+
+//Helper
+@import './Helpers/_variables.scss';
+@import './Helpers/_mixin.scss';
+
+//button
+@import './components/_button.scss';
+
+//Layout
+@import './Layout/_header.scss';
+@import './Layout/_banner.scss';
+@import './Layout/_design.scss';
+@import './Layout/_skills.scss';
+@import './Layout/_showcase.scss';
+@import './Layout/_team.scss';
+@import './Layout/_cover.scss';
+@import './Layout/_blog.scss';
+@import './Layout/_intro.scss';
+@import './Layout/_numbers.scss';
+@import './Layout/_feedback.scss';
+@import './Layout/_partners.scss';
+@import './Layout/_footer.scss';
+@import './Layout/_copyright.scss';
+
+
