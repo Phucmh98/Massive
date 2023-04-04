@@ -442,7 +442,7 @@ body {
   }
 }
 .skills {
-  background-image: url("../../img/skills.jpg");
+  background-image: url("../img/skills.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -920,7 +920,7 @@ body {
 }
 .cover {
   padding: 150px 0;
-  background-image: url("../../img/cover.jpg");
+  background-image: url("../img/cover.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

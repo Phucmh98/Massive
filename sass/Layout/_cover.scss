@@ -1,6 +1,6 @@
 .cover {
     padding: $pd-9 + 20 0;
-    background-image: url('../../img/cover.jpg');
+    background-image: url('../img/cover.jpg');
     @include backGroundFix();
     text-align: center;
 
